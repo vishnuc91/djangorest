@@ -16,7 +16,7 @@ class UploadSerializer(serializers.Serializer):
         """
         Update and return an existing `Snippet` instance, given the validated data.
         """
-        instance.title = validated_data.get('name', instance.name)
-        instance.code = validated_data.get('image', instance.image)
+        instance.name = validated_data.get('name', instance.name)
+        instance.image = validated_data.get('image', instance.image)
         instance.save()
         return instance
